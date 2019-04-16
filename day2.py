@@ -16,4 +16,11 @@ def getprod(arr):
         out = np.multiply(mask, out)
     return out
 
-print(getprod(input))
+def getprod_withdiv(arr):
+    prod = np.prod(arr)
+    out = []
+    for x in range(len(arr)):
+        out.append(prod / arr[x])
+    return out
+
+print(getprod_withdiv(input))
