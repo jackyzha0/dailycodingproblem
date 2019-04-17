@@ -23,4 +23,5 @@ def getprod_withdiv(arr):
         out.append(prod / arr[x])
     return out
 
+print(getprod(input))
 print(getprod_withdiv(input))
