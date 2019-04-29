@@ -22,7 +22,7 @@ def longestSub(s, k):
     #return length of longest
 
     p1 = 0
-    p2 = 1
+    p2 = 0
     longest = ""
     nset = set()
 
