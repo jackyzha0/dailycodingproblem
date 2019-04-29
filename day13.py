@@ -8,6 +8,7 @@ def longestSub(s, k):
     #pointer 1
     #pointer 2
     #longest
+    #set
 
     #if pointer1 == pointer2
     #pointer2++ until pointer1 != pointer2
@@ -20,5 +21,17 @@ def longestSub(s, k):
     #if valid and longest, update longest
     #return length of longest
 
+    p1 = 0
+    p2 = 1
+    longest = ""
+    nset = set()
+
+    while s[p1] == s[p2]:
+        p2 += 1
+
+    print(p1, p2)
+
 inp = "abcda"
 k = 2
+
+print(longestSub(inp, k))
