@@ -8,10 +8,8 @@ arr = [(30, 75), (0, 50), (60, 150)]
 
 def d21(arr):
     times = [0] * (max(max(arr)))
-
     for pair in arr:
         times[pair[0]:pair[1]] = [x + 1 for x in times[pair[0]:pair[1]]]
-
     return max(times)
 
 print(d21(arr))
