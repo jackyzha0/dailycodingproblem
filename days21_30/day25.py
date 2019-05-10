@@ -12,18 +12,25 @@ Given the regular expression ".*at" and the string "chat", your function should 
 '''
 
 def day25(string, regex):
-    si = 0
-    ri = 0
-
-    while si < len(string):
-        if string[si] != regex[ri] and regex[ri] != ".":
-            return False
+    i = 0
+    while i < len(string):
+        if regex[i] not in [".","*"]:
+            if regex[i] == string[i]:
+                i += 1
+            else:
+                return False
+        elif regex[i] == ".":
+            i += 1
         else:
-            si += 1
-            ri += 1
+            print(day25(string[i:], regex[i:]))
+            print(day25(string[i+1:], regex[i:]))
+            print(day25(string[i:], regex[i+1:]))
+            print(day25(string[i+1:], regex[i+1:]))
+            return 0
+
     return True
 
-s1 = "ray"
-r1 = "rab"
+s1 = "chat"
+r1 = ".*at"
 
 print(day25(s1,r1))
