@@ -21,3 +21,21 @@ class Solution(object):
                 pass
 
 # Top 43.5% runtime
+
+class Solution(object):
+    def twoSum(self, nums, target):
+        """
+        :type nums: List[int]
+        :type target: int
+        :rtype: List[int]
+        """
+
+        nset = dict()
+
+        for x in range(len(nums)):
+            comp = target - nums[x]
+            if comp in nset:
+                return [nset[comp], x]
+            nset[nums[x]] = x
+
+# Top 69.64% runtime
