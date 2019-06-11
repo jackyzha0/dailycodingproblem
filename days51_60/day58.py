@@ -36,9 +36,9 @@ def binsearch(arr, low, high, val):
     if arr[mid] == val:
         return mid
     if arr[mid] < val:
-        return binsearch(arr, mid + 1, high, val)
+        return binsearch(arr, mid, high, val)
     if arr[mid] > val:
-        return binsearch(arr, low, mid - 1, val)
+        return binsearch(arr, low, mid, val)
 
 arr = [13, 18, 25, 2, 8, 10]
 element = 8
