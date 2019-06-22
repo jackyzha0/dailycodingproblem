@@ -11,9 +11,6 @@ def day69(arr):
     pos = [x for x in s if x > 0]
     neg = [abs(x) for x in s if x < 0]
 
-    s3 = pos[-3:]
-    twon = neg[:2] + [pos[-1]]
-
     res = max(pos[-3:], neg[:2] + [pos[-1]])
     r = 1
 
