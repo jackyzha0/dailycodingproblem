@@ -9,7 +9,7 @@ class ListNode():
         else:
             return str(self.val)
 
-# 2.1 - remove dupes from linkedlist
+# 2.1 - remove dupes from linkedlist (satisfies follow-up reqs)
 def removeDupesLL(head):
     while head.val == head.next.val:
         head = head.next
@@ -23,9 +23,9 @@ def removeDupesLL(head):
 
     return root
 
-# 2.1 Follow Up - no temp buffer
-
 # 2.2 nth-to-last element of linkedlist
+
+
 
 # 2.3 delete node given only access to node
 
