@@ -13,7 +13,7 @@ class Trie():
         root = rootref = self.root
 
         for c in word:
-            if not c in root.children:
+            if c not in root.children:
                 root.children[c] = TrieNode(c)
             root = root.children[c]
 
